@@ -1,0 +1,13 @@
+<div class="container" style="margin-top: 30px;">
+    <div class="row">
+        <div class="col-16" style="width: 1000px; position: relative; flex-direction: row; margin-left: auto;">
+            <div class="container row">
+                <!--cArrFather is the array that takes value from the service in the father component
+                onDelete is the name of the Output in the child component which is fired by a function inside the child
+            [Country] is the name of the Input in the child component  -->
+                <app-single-country *ngFor="let c of cArrFather; let i=index" [country]="c" (onDelete)="deleteCountryFromFather(e)" (onEdit)="editCountryInFather($event,i)">
+                </app-single-country>
+            </div>
+        </div>
+    </div>
+</div>

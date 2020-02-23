@@ -1,0 +1,18 @@
+<div class="container">
+    <h1 [ngStyle]="{backgroundColor:getColor()}">Binding assigment</h1>
+    <h3>above is ngstyle</h3>
+    <h1 [ngClass]="{notEmpty:checker}">Binding assigment</h1>
+    <h3>aboive is ngclass</h3>
+    <div class="row">
+        <div class="col-xs-12">
+            <p> Enter Username: <input class="form-control" type="text" (input)="takeUserName($event)"
+                    [(ngModel)]="temp" /></p>
+            <p>{{temp}}</p>
+            <button class=" btn btn-danger" type="button" (click)="takeValueAndReset()" [disabled]="!checker">Add
+                User</button>
+            <ul *ngFor="let user of userName">
+                <li>{{user}}</li>
+            </ul>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="jumbotron">
+        <h1 style="text-align: center;">Country Information</h1>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <div>
+                <h3>{{country.name}}</h3>
+                <p>alpha3Code: {{country.alpha3Code}}</p>
+                <p> Capital: {{country.capital}}</p>
+                <p>Borders: {{country.borders}}</p>
+                <p>Currencies: {{country.currencies.name}}</p>
+                <ul *ngFor="let coin of country.currencies">
+                    <li>{{coin.name}}</li>
+                    <!-- array.find((x)=>{return x.currencies.length>1}) -->
+                </ul>
+                <img src={{country.flag}} alt="oops" class="increaser" style="border: 1px solid black;">
+            </div>
+            <a style="color: white;" [routerLink]="['/countries']"><button type="button"
+                    class="btn btn-secondary buttonSpaceUp" style="margin-bottom: 15px;">Back</button></a>
+        </div>
+    </div>
+
+</div>

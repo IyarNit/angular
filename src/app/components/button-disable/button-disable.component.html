@@ -1,0 +1,18 @@
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <p> <button class="btn btn-primary" type="button" (click)="tryout()">the enabled</button></p>
+
+            <p> <button class="btn btn-dark" type="button" [disabled]="!makeTrue" (click)="clickable()"> the
+                    disabled</button></p>
+
+            <hr style="color: black;" />
+            <div>
+                <p>adasd:<input class="form-control" type="text" (input)="inputLogger($event)" [(ngModel)]="h5Title" />
+                </p>
+                <h5>{{h5Title}}</h5>
+            </div>
+
+        </div>
+    </div>
+</div>

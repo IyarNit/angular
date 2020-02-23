@@ -1,0 +1,18 @@
+<div class="card" style="width: 18rem;margin: auto;">
+    <div className="container row">
+        <div class="card-body">
+            <h5 class="card-title titleColorer" *ngIf="!showEdit">{{lol}}</h5>
+            <input type="text" (input)="inputHandler($event)" [(ngModel)]="lol" *ngIf="showEdit" />
+            <button type="button" class="btn-dark" *ngIf="showEdit" (click)="save()">Save</button>
+            <img src={{country.flag}} class="card-img-top increaser" alt="oops" style="border: 1px solid black;">
+            <br />
+            <button type="button" class="btn btn-danger buttonSpaceUp" (click)="delete()">Delete</button>
+            <br />
+            <button type="button" class="btn btn-primary buttonSpaceUp"  *ngIf="!showEdit" (click)="showEdit=!showEdit">Edit</button>
+            <br />
+            <a style="color: white;" [routerLink]="['/countryInformation', country.name]"><button type="button"
+                    class="btn btn-secondary buttonSpaceUp">Info</button></a>
+
+        </div>
+    </div>
+</div>
